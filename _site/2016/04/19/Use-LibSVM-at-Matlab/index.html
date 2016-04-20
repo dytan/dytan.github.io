@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="感悟世界，学习纪录，trying to be a coder">
-    <meta name="keyword"  content="dytan, Hux Blog, 博客, 个人网站, machine learning, coding">
+    <meta name="description" content="感悟世界，学习纪录，to be a thoughtful coder">
+    <meta name="keyword"  content="dytan, 博客, 个人网站, machine learning, coding">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>LibSVM 在 Matlab中的使用 - 星天炎地 | Hux Blog</title>
+    <title>LibSVM 在 Matlab中的使用 - 星天炎地 | Dytan Blog</title>
 
     <link rel="canonical" href="/2016/04/19/Use-LibSVM-at-Matlab/">
 
@@ -62,7 +62,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Dytan Blog</a>
+            <a class="navbar-brand" href="/">星天炎地</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -208,11 +208,15 @@
 
 <p>支持向量机(SVM，Support Vector Machine）是一种基于统计学习理论的模式识别方法，在解决小样本、高维度及非线性的分类问题中应用非常广泛。<br />LIBSVM是一个由台湾大学林智仁(Lin Chih-Jen)教授等开发的SVM模式识别与回归的软件包，使用简单，功能强大，本文主要介绍其在Matlab中的使用。</p>
 
-<p>##一 安装
-###1. 下载
-在LIBSVM的<a href="&quot;http://www.csie.ntu.edu.tw/~cjlin/libsvm/index.html&quot; rel=&quot;external nofollow&quot;">主页</a>上下载最新版本的软件包，并解压到合适目录中。
-###2. 编译
-如果你使用的是64位的操作的系统和Matlab，那么不需要进行编译步骤，因为自带软件包中已经包含有64位编译好的版本：libsvmread.mexw64、libsvmwrite.mexw64、svmtrain.mexw64、svmpredict.mexw64。</p>
+<h2 id="section">一 安装</h2>
+
+<h3 id="section-1">1. 下载</h3>
+
+<p>在LIBSVM的<a href="&quot;http://www.csie.ntu.edu.tw/~cjlin/libsvm/index.html&quot; rel=&quot;external nofollow&quot;">主页</a>上下载最新版本的软件包，并解压到合适目录中。</p>
+
+<h3 id="section-2">2. 编译</h3>
+
+<p>如果你使用的是64位的操作的系统和Matlab，那么不需要进行编译步骤，因为自带软件包中已经包含有64位编译好的版本：libsvmread.mexw64、libsvmwrite.mexw64、svmtrain.mexw64、svmpredict.mexw64。</p>
 
 <p>否则，需要自己编译二进制文件。
 首先在Mtlab中进入LIBSVM根目录下的matlab目录（如C:\libsvm-3.17\matlab），在命令窗口输入
@@ -225,8 +229,9 @@
 
 <p>注意，Matlab或VC版本过低可能会导致编译失败，建议使用最新的版本。</p>
 
-<p>编译成功后，当前目录下会出现若干个后缀为mexw64（64位系统）或mexw32（32位系统）的文件。
-###3. 重命名（可选，但建议执行）</p>
+<p>编译成功后，当前目录下会出现若干个后缀为mexw64（64位系统）或mexw32（32位系统）的文件。</p>
+
+<h3 id="section-3">3. 重命名（可选，但建议执行）</h3>
 
 <p>编译完成后，在当前目录下回出现svmtrain.mexw64、svmpredict.mexw64（64位系统）或者svmtrain.mexw32、svmpredict.mexw32（32位系统）这两个文件，把文件名svmtrain和svmpredict相应改成libsvmtrain和libsvmpredict。</p>
 
@@ -236,7 +241,7 @@
   <p><em>如果有进行重命名的，以后使用LIBSVM时一律使用libsvmtrain和libsvmpredict这两个名字进行调用。</em></p>
 </blockquote>
 
-<p>###4. 添加路径</p>
+<h3 id="section-4">4. 添加路径</h3>
 
 <p>为了以后使用的方便，建议把LIBSVM的编译好的文件所在路径（如C:\libsvm-3.17\matlab）添加到Matlab的搜索路径中。具体操作为：（中文版Matlab对应进行）</p>
 
@@ -246,8 +251,9 @@
 
 <p>当然也可以把那4个编译好的文件复制到想要的地方，然后再把该路径添加到Matlab的搜索路径中。</p>
 
-<p>##二 测试
-LIBSVM软件包中自带有测试数据，为软件包根目录下的heart_scale文件，可以用来测试LIBSVM是否安装成功。这里的heart_scale文件不能用Matlab的load进行读取，需要使用libsvmread读取。</p>
+<h2 id="section-5">二 测试</h2>
+
+<p>LIBSVM软件包中自带有测试数据，为软件包根目录下的heart_scale文件，可以用来测试LIBSVM是否安装成功。这里的heart_scale文件不能用Matlab的load进行读取，需要使用libsvmread读取。</p>
 
 <p>进入LIBSVM的根目录运行以下代码（因为heart_scale文件没有被添加进搜索路径中，其他路径下无法访问这个文件）：</p>
 
@@ -264,9 +270,11 @@ nu = 0.433785
 obj = -101.855060, rho = 0.426412
 nSV = 130, nBSV = 107
 Total nSV = 130
-Accuracy = 86.6667% (234/270) (classification) ###三 原理简介
+Accuracy = 86.6667% (234/270) (classification)
 </code></pre>
 </div>
+
+<h3 id="section-6">三 原理简介</h3>
 
 <p>使用SVM前首先得了解SVM的工作原理，简单介绍如下:</p>
 
@@ -278,32 +286,39 @@ Accuracy = 86.6667% (234/270) (classification) ###三 原理简介
 
 <p>虽然SVM本质上是二分类的分类器，但是可以扩展成多分类的分类器，常见的方法有一对多（one-versus-rest）和一对一（one-versus-one）。在一对多方法中，训练时依次把k类样本中的某个类别归为一类，其它剩下的归为另一类，使用二分类的SVM训练处一个二分类器，最后把得到的k个二分类器组成k分类器。对未知样本分类时，分别用这k个二分类器进行分类，将分类结果中出现最多的那个类别作为最终的分类结果。而一对一方法中，训练时对于任意两类样本都会训练一个二分类器，最终得到k*(k-1)/2个二分类器，共同组成k分类器。对未知样本分类时，使用所有的k*(k-1)/2个分类器进行分类，将出现最多的那个类别作为该样本最终的分类结果。</p>
 
-<p>LIBSVM中的多分类就是根据一对一的方法实现的。
-##四 使用</p>
+<p>LIBSVM中的多分类就是根据一对一的方法实现的。</p>
 
-<p>关于LIBSVM在Matlab中的使用，可以参看软件包中matlab目录下的README文件，这里对里面内容做一个翻译和一些细节的讲解。
-###1. 训练
-libsvm函数用于对训练集的数据进行训练，得到训练好的模型。
+<h2 id="section-7">四 使用</h2>
+
+<p>关于LIBSVM在Matlab中的使用，可以参看软件包中matlab目录下的README文件，这里对里面内容做一个翻译和一些细节的讲解。</p>
+
+<h3 id="section-8">1. 训练</h3>
+
+<p>libsvm函数用于对训练集的数据进行训练，得到训练好的模型。
 &gt;<code class="highlighter-rouge">model = libsvmtrain(training_label_vector, training_instance_matrix [, 'libsvm_options']);</code></p>
 
 <p>这个函数有三个参数，其中
-- training_label_vector:训练样本的类标，如果有m个样本，就是m x 1的矩阵（类型必须为double）。这里可以是二分类和多分类，类标是（-1,1）、（1,2,3）或者其他任意用来表示不同的类别的数字，要转成double类型。
+&gt;- training_label_vector:训练样本的类标，如果有m个样本，就是m x 1的矩阵（类型必须为double）。这里可以是二分类和多分类，类标是（-1,1）、（1,2,3）或者其他任意用来表示不同的类别的数字，要转成double类型。
 - training_instance_matrix:训练样本的特征，如果有m个样本，每个样本特征是n维，则为m x n的矩阵（类型必须为double）。
 - libsvm_options:训练的参数，在第3点详细介绍。</p>
 
-<p>###2. 预测
-libpredict函数用于对测试集的数据进行测试，还能对未知样本进行预测。
+<p>###2. 预测</p>
+
+<p>libpredict函数用于对测试集的数据进行测试，还能对未知样本进行预测。
 &gt;<code class="highlighter-rouge">[predicted_label, accuracy, decision_values/prob_estimates]　= libsvmpredict(testing_label_vector, testing_instance_matrix, model [,'libsvm_options'])</code>;</p>
 
 <p>这个函数包括四个参数，其中</p>
 
-<p>-testing_label_vector:测试样本的类标，如果有m个样本，就是m x 1的矩阵（类型必须为double）。如果类标未知，可以初始化为任意m x 1的double数组。
+<blockquote>
+  <p>-testing_label_vector:测试样本的类标，如果有m个样本，就是m x 1的矩阵（类型必须为double）。如果类标未知，可以初始化为任意m x 1的double数组。
 -testing_instance_matrix:测试样本的特征，如果有m个样本，每个样本特征是n维，则为m x n的矩阵（类型必须为double）。
 -model:使用libsvmtrain返回的模型
 -libsvm_options:预测的参数，与训练的参数形式一样。</p>
+</blockquote>
 
-<p>###3. 训练的参数
-LIBSVM训练时可以选择的参数很多，包括：</p>
+<h3 id="section-9">3. 训练的参数</h3>
+
+<p>LIBSVM训练时可以选择的参数很多，包括：</p>
 
 <blockquote>
   <ul>
@@ -328,42 +343,49 @@ LIBSVM训练时可以选择的参数很多，包括：</p>
   </ul>
 </blockquote>
 
-<p>以上这些参数设置可以按照SVM的类型和核函数所支持的参数进行任意组合，如果设置的参数在函数或SVM类型中没有也不会产生影响，程序不会接受该参数；如果应有的参数设置不正确，参数将采用默认值。
-###4. 训练返回的内容
-libsvmtrain函数返回训练好的SVM分类器模型，可以用来对未知的样本进行预测。这个模型是一个结构体，包含以下成员：</p>
+<p>以上这些参数设置可以按照SVM的类型和核函数所支持的参数进行任意组合，如果设置的参数在函数或SVM类型中没有也不会产生影响，程序不会接受该参数；如果应有的参数设置不正确，参数将采用默认值。</p>
 
-<ul>
-  <li>
-    <p>Parameters: 一个5 x 1的矩阵，从上到下依次表示：<br />
+<h3 id="section-10">4. 训练返回的内容</h3>
+
+<p>libsvmtrain函数返回训练好的SVM分类器模型，可以用来对未知的样本进行预测。这个模型是一个结构体，包含以下成员：</p>
+
+<blockquote>
+  <ul>
+    <li>Parameters: 一个5 x 1的矩阵，从上到下依次表示：<br />
 　　　　-s SVM类型（默认0）； 
 　　　　-t 核函数类型（默认2）<br />
 　　　　-d 核函数中的degree设置(针对多项式核函数)(默认3)；<br />
 　　　　-g 核函数中的r(gamma）函数设置(针对多项式/rbf/sigmoid核函数) (默认类别数目的倒数)；<br />
-　　　　-r 核函数中的coef0设置(针对多项式/sigmoid核函数)((默认0)</p>
-  </li>
-  <li>nr_class: 表示数据集中有多少类别，比如二分类时这个值即为2。</li>
-  <li>totalSV: 表示支持向量的总数。</li>
-  <li>rho: 决策函数wx+b中的常数项的相反数（-b）。</li>
-  <li>Label: 表示数据集中类别的标签，比如二分类常见的1和-1。</li>
-  <li>ProbA: 使用-b参数时用于概率估计的数值，否则为空。</li>
-  <li>ProbB: 使用-b参数时用于概率估计的数值，否则为空。</li>
-  <li>nSV: 表示每类样本的支持向量的数目，和Label的类别标签对应。如Label=[1; -1],nSV=[63; 67]，则标签为1的样本有63个支持向量，标签为-1的有67个。</li>
-  <li>sv_coef: 表示每个支持向量在决策函数中的系数。</li>
-  <li>SVs: 表示所有的支持向量，如果特征是n维的，支持向量一共有m个，则为m x n的稀疏矩阵。</li>
-</ul>
+　　　　-r 核函数中的coef0设置(针对多项式/sigmoid核函数)((默认0)</li>
+    <li>nr_class: 表示数据集中有多少类别，比如二分类时这个值即为2。</li>
+    <li>totalSV: 表示支持向量的总数。</li>
+    <li>rho: 决策函数wx+b中的常数项的相反数（-b）。</li>
+    <li>Label: 表示数据集中类别的标签，比如二分类常见的1和-1。</li>
+    <li>ProbA: 使用-b参数时用于概率估计的数值，否则为空。</li>
+    <li>ProbB: 使用-b参数时用于概率估计的数值，否则为空。</li>
+    <li>nSV: 表示每类样本的支持向量的数目，和Label的类别标签对应。如Label=[1; -1],nSV=[63; 67]，则标签为1的样本有63个支持向量，标签为-1的有67个。</li>
+    <li>sv_coef: 表示每个支持向量在决策函数中的系数。</li>
+    <li>SVs: 表示所有的支持向量，如果特征是n维的，支持向量一共有m个，则为m x n的稀疏矩阵。</li>
+  </ul>
+</blockquote>
 
-<p>另外，如果在训练中使用了-v参数进行交叉验证时，返回的不是一个模型，而是交叉验证的分类的正确率或者回归的均方根误差。
-###5. 预测返回的内容
-libsvmtrain函数有三个返回值，不需要的值在Matlab可以用~进行代替。</p>
+<p>另外，如果在训练中使用了-v参数进行交叉验证时，返回的不是一个模型，而是交叉验证的分类的正确率或者回归的均方根误差。</p>
 
-<ul>
-  <li>predicted_label：第一个返回值，表示样本的预测类标号。</li>
-  <li>accuracy：第二个返回值，一个3 x 1的数组，表示分类的正确率、回归的均方根误差、回归的平方相关系数。</li>
-  <li>decision_values/prob_estimates：第三个返回值，一个矩阵包含决策的值或者概率估计。对于n个预测样本、k类的问题，如果指定“-b 1”参数，则n x k的矩阵，每一行表示这个样本分别属于每一个类别的概率；如果没有指定“-b 1”参数，则为n x k*(k-1)/2的矩阵，每一行表示k(k-1)/2个二分类SVM的预测结果。</li>
-</ul>
+<h3 id="section-11">5. 预测返回的内容</h3>
 
-<p>###6. 读取或保存
-libsvmread函数可以读取以LIBSVM格式存储的数据文件。
+<p>libsvmtrain函数有三个返回值，不需要的值在Matlab可以用~进行代替。</p>
+
+<blockquote>
+  <ul>
+    <li>predicted_label：第一个返回值，表示样本的预测类标号。</li>
+    <li>accuracy：第二个返回值，一个3 x 1的数组，表示分类的正确率、回归的均方根误差、回归的平方相关系数。</li>
+    <li>decision_values/prob_estimates：第三个返回值，一个矩阵包含决策的值或者概率估计。对于n个预测样本、k类的问题，如果指定“-b 1”参数，则n x k的矩阵，每一行表示这个样本分别属于每一个类别的概率；如果没有指定“-b 1”参数，则为n x k*(k-1)/2的矩阵，每一行表示k(k-1)/2个二分类SVM的预测结果。</li>
+  </ul>
+</blockquote>
+
+<h3 id="section-12">6. 读取或保存</h3>
+
+<p>libsvmread函数可以读取以LIBSVM格式存储的数据文件。
 &gt;<code class="highlighter-rouge">[label_vector, instance_matrix] = libsvmread("data.txt");</code></p>
 
 <p>这个函数输入的是文件的名字，输出为样本的类标和对应的特征。
@@ -372,8 +394,9 @@ libsvmwrite函数可以把Matlab的矩阵存储称为LIBSVM格式的文件。
 
 <p>这个函数有三个输入，分别为保存的文件名、样本的类标和对应的特征（必须为double类型的稀疏矩阵）。</p>
 
-<p>##五 更新:svdd扩展安装（2014.10）
- 从<a href="&quot;http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/#libsvm_for_svdd_and_finding_the_smallest_sphere_containing_all_data&quot;">libsvm官网</a>下载svdd工具箱，目前使用libsvm3.18以及svdd3.18版本。
+<h2 id="svdd201410">五 更新:svdd扩展安装（2014.10）</h2>
+
+<p>从<a href="&quot;http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/#libsvm_for_svdd_and_finding_the_smallest_sphere_containing_all_data&quot;">libsvm官网</a>下载svdd工具箱，目前使用libsvm3.18以及svdd3.18版本。
 svdd工具箱里面有一个matlab文件夹和3个文件svm.cpp、svm.h、svm-train.c。</p>
 
 <p>将matlab文件夹中的文件svmtrain.c覆盖原libsvm的matlab文件夹中的文件。 <br />
@@ -381,7 +404,8 @@ svdd工具箱里面有一个matlab文件夹和3个文件svm.cpp、svm.h、svm-tr
 按本文刚开始讲述的方法进行mex -setup、make等完成安装，根据需要进行改名以及添加Path。</p>
 
 <h1 id="codesnippt">codesnippt</h1>
-<p>## install</p>
+
+<h2 id="install">install</h2>
 
 <h2 id="use">use</h2>
 
@@ -409,7 +433,7 @@ model=svmtrain(heart_scale_label,heart_scale_inst,'-c 1 -g 0.07'
                     data-images="/img/post-bg-re-vs-ng2.jpg"
                     data-content="
 
-支持向量机(SVM，Support Vector Machine）是一种基于统计学习理论的模式识别方法，在解决小样本、高维度及非线性的分类问题中应用非... | 星天炎地 | Hux Blog " >
+支持向量机(SVM，Support Vector Machine）是一种基于统计学习理论的模式识别方法，在解决小样本、高维度及非线性的分类问题中应用非... | 星天炎地 | Dytan Blog " >
                     <div class="ds-share-inline">
                       <ul  class="ds-share-icons-16">
                         <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
@@ -444,6 +468,12 @@ model=svmtrain(heart_scale_label,heart_scale_inst,'-c 1 -g 0.07'
                 <!-- 多说评论框 end -->
                 
 
+                
+                <!-- disqus 评论框 start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus 评论框 end -->
                 
 
             </div>  
@@ -500,7 +530,7 @@ model=svmtrain(heart_scale_label,heart_scale_inst,'-c 1 -g 0.07'
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
     // dynamic User by Hux
-    var _user = 'huxblog';
+    var _user = 'dytan';
 
     // duoshuo comment query.
     var duoshuoQuery = {short_name: _user };
@@ -517,6 +547,21 @@ model=svmtrain(heart_scale_label,heart_scale_inst,'-c 1 -g 0.07'
 
 
 
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "dytan";
+    var disqus_identifier = "/2016/04/19/Use-LibSVM-at-Matlab";
+    var disqus_url = "/2016/04/19/Use-LibSVM-at-Matlab/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
 
 
 
@@ -581,7 +626,7 @@ model=svmtrain(heart_scale_label,heart_scale_inst,'-c 1 -g 0.07'
 
                     
                     <li>
-                        <a target="_blank" href="https://www.facebook.com/huxpro">
+                        <a target="_blank" href="https://www.facebook.com/Di Tang">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -601,7 +646,7 @@ model=svmtrain(heart_scale_label,heart_scale_inst,'-c 1 -g 0.07'
                     
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; Dytan Blog 2016
+                    Copyright &copy; 星天炎地 2016
                     <br>
                     Theme by <a href="http://huangxuan.me">Hux</a> |
                     <iframe
@@ -685,6 +730,20 @@ model=svmtrain(heart_scale_label,heart_scale_inst,'-c 1 -g 0.07'
 
 
 <!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = 'b5a2c5d7784627f45b5c80bc1c0a5e00';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
 
 
 
