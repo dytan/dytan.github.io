@@ -3,8 +3,8 @@ title: 星天炎地
 SEOTitle: 星天炎地 | Dytan Blog
 header-img: img/home-bg.jpg
 email: tidy1995@gmail.com
-description: "感悟世界，学习纪录，trying to be a coder"
-keyword: "dytan,  博客, 个人网站, machine learning, coding"
+description: "感悟世界，学习纪录，to be a thoughtful coder"
+keyword: "dytan, 博客, 个人网站, machine learning, coding"
 #url: "http://huangxuan.me"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -59,9 +59,9 @@ duoshuo_share: true                     # set to false if you want to use Commen
 
 
 
-# # Analytics settings
-# # Baidu Analytics
-# ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
+# Analytics settings
+# Baidu Analytics
+ba_track_id: b5a2c5d7784627f45b5c80bc1c0a5e00
 # # Google Analytics
 # ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
 # ga_domain: huangxuan.me
@@ -70,8 +70,8 @@ duoshuo_share: true                     # set to false if you want to use Commen
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "I see, I figure out。"
-#sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "I come, I see, I conquer."
+sidebar-avatar: /img/avatar-dytan.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
