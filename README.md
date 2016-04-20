@@ -1,6 +1,6 @@
-#Hux Blog
+#Dytan Blog
 
-###[View Live Hux Blog &rarr;](http://huxpro.github.io)
+###[View Live dytan Blog &rarr;](http://huxpro.github.io)
 
 ![](http://huangxuan.me/img/blog-desktop.jpg)
 
@@ -303,5 +303,5 @@ So, the SEO Title is introduced to solve this problem, you can set `SEOTitle` di
 
 ## Thanks
 
-This theme is forked from [IronSummitMedia/startbootstrap-clean-blog-jekyll](https://github.com/IronSummitMedia/startbootstrap-clean-blog-jekyll)  
-Thanks Jekyll and Github Pages!
+This theme is forked from [Huxpro/huxpro.github.io ](https://github.com/Huxpro/huxpro.github.io)  
+Much thanks to Huxpro, also Thanks Jekyll and Github Pages!
