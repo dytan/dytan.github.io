@@ -16,7 +16,7 @@ weibo_username:     K吉可德
 #zhihu_username:    
 github_username:    dytan
 #twitter_username:  Di Tang
-facebook_username:  huxpro
+facebook_username:  Di Tang
 
 #port
 port:	5001
@@ -49,10 +49,10 @@ kramdown:
 
 
 # Disqus settings
-#disqus_username: _your_disqus_short_name_
+disqus_username: dytan
 
 # Duoshuo settings
-duoshuo_username: huxblog
+duoshuo_username: dytan
 # Share component is depend on Comment so we can NOT use share only.
 duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
