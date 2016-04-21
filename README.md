@@ -1,10 +1,9 @@
-#Dytan Blog
 
-###[View Live dytan Blog &rarr;](http://huxpro.github.io)
+# [Dytan Blog](http://dytan.github.io)
 
-![](http://huangxuan.me/img/blog-desktop.jpg)
+Thanks to [Hux](http://huxpro.github.io)
 
-
+<!--
 ### "Page Build Warning" email
 
 These days, some of you must receive a "Page Build Warning" email from github after you commit happily. **Don't Worried!** It just that github changes its build environment.
@@ -19,7 +18,7 @@ So, just edit `_config.yml`, find `highlighter: pygments`, change it to `highlig
 ## Boilerplate (beta)
 
 Want to clone a boilerplate instead of my buzz blog? Here comes this!  
-<!--
+--><!--
 ```
 $ git clone git@github.com:Huxpro/huxblog-boilerplate.git
 ```
