@@ -14,6 +14,7 @@ tags:
 ---
 
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+>[文章](http://noalgo.info/363.html)来自[NoAlGo](http://noalgo.info)博客原创，感谢NoAlGo.
 
 支持向量机(SVM，Support Vector Machine）是一种基于统计学习理论的模式识别方法，在解决小样本、高维度及非线性的分类问题中应用非常广泛。<br />LIBSVM是一个由台湾大学林智仁(Lin Chih-Jen)教授等开发的SVM模式识别与回归的软件包，使用简单，功能强大，本文主要介绍其在Matlab中的使用。
 
