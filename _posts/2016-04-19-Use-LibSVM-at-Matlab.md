@@ -13,8 +13,8 @@ tags:
     - ML
 ---
 
-<!--// <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>-->
-<script type="text/javascript" src="/js/MathJax.js"></script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
     
 >[文章](http://noalgo.info/363.html)来自[NoAlGo](http://noalgo.info)博客原创，感谢NoAlGo.
 

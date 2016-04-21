@@ -12,7 +12,7 @@
 
     <title>LibSVM 在 Matlab中的使用 - 星天炎地 | Dytan Blog</title>
 
-    <link rel="canonical" href="/2016/04/19/Use-LibSVM-at-Matlab/">
+    <link rel="canonical" href="http://dytan.github.io/2016/04/19/Use-LibSVM-at-Matlab/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -205,6 +205,10 @@
                 post-container">
 
 				<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+<blockquote>
+  <p><a href="http://noalgo.info/363.html">文章</a>来自<a href="http://noalgo.info">NoAlGo</a>博客原创，感谢NoAlGo.</p>
+</blockquote>
 
 <p>支持向量机(SVM，Support Vector Machine）是一种基于统计学习理论的模式识别方法，在解决小样本、高维度及非线性的分类问题中应用非常广泛。<br />LIBSVM是一个由台湾大学林智仁(Lin Chih-Jen)教授等开发的SVM模式识别与回归的软件包，使用简单，功能强大，本文主要介绍其在Matlab中的使用。</p>
 
@@ -429,11 +433,15 @@ model=svmtrain(heart_scale_label,heart_scale_inst,'-c 1 -g 0.07'
                     style="text-align: right"
                     data-thread-key="/2016/04/19/Use-LibSVM-at-Matlab"
                     data-title="LibSVM 在 Matlab中的使用"
-                    data-url="/2016/04/19/Use-LibSVM-at-Matlab/"
-                    data-images="/img/post-bg-re-vs-ng2.jpg"
+                    data-url="http://dytan.github.io/2016/04/19/Use-LibSVM-at-Matlab/"
+                    data-images="http://dytan.github.io/img/post-bg-re-vs-ng2.jpg"
                     data-content="
 
-支持向量机(SVM，Support Vector Machine）是一种基于统计学习理论的模式识别方法，在解决小样本、高维度及非线性的分类问题中应用非... | 星天炎地 | Dytan Blog " >
+
+  文章来自NoAlGo博客原创，感谢NoAlGo.
+
+
+支持向量机(SVM，Support Vector Machine）是一种基于统计学习理论的... | 星天炎地 | Dytan Blog " >
                     <div class="ds-share-inline">
                       <ul  class="ds-share-icons-16">
                         <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
@@ -462,7 +470,7 @@ model=svmtrain(heart_scale_label,heart_scale_inst,'-c 1 -g 0.07'
                     <div class="ds-thread"
                         data-thread-key="/2016/04/19/Use-LibSVM-at-Matlab"
                         data-title="LibSVM 在 Matlab中的使用"
-                        data-url="/2016/04/19/Use-LibSVM-at-Matlab/" >
+                        data-url="http://dytan.github.io/2016/04/19/Use-LibSVM-at-Matlab/" >
                     </div>
                 </div>
                 <!-- 多说评论框 end -->
@@ -553,12 +561,17 @@ model=svmtrain(heart_scale_label,heart_scale_inst,'-c 1 -g 0.07'
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "dytan";
     var disqus_identifier = "/2016/04/19/Use-LibSVM-at-Matlab";
-    var disqus_url = "/2016/04/19/Use-LibSVM-at-Matlab/";
-
+    var disqus_url = "http://dytan.github.io/2016/04/19/Use-LibSVM-at-Matlab/";
+    var disqus_config=function(){
+        this.page.url=disqus_url;
+        this.page.identifier=disqus_identifier;
+    };
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        dsq.setAttribute('data-timestamp', +new Date());
+        //dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        dsq.src = '//dytan.disqus.com/embed.js';
+        (document.head || document.body).appendChild(dsq);
     })();
 </script>
 <!-- disqus 公共JS代码 end -->
@@ -609,6 +622,15 @@ model=svmtrain(heart_scale_label,heart_scale_inst,'-c 1 -g 0.07'
                 <ul class="list-inline text-center">
                     
                     
+                    <li>
+                        <a href="https://twitter.com/ditang995">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
 
                     <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
                     
@@ -626,7 +648,7 @@ model=svmtrain(heart_scale_label,heart_scale_inst,'-c 1 -g 0.07'
 
                     
                     <li>
-                        <a target="_blank" href="https://www.facebook.com/Di Tang">
+                        <a target="_blank" href="https://www.facebook.com/di.tang.12">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
