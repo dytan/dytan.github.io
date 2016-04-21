@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: tidy1995@gmail.com
 description: "感悟世界，学习纪录，to be a thoughtful coder"
 keyword: "dytan, 博客, 个人网站, machine learning, coding"
-#url: "http://huangxuan.me"              # your host, for absolute URL
+url: "http://dytan.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
