@@ -1,4 +1,4 @@
-_site
+/_site
 
 node_modules
 npm-debug.log
@@ -7,6 +7,6 @@ npm-debug.log
 */*/.DS_Store
 *.sh
 
-.vscode
+/.vscode
 browse.VC.db
 *.bak
