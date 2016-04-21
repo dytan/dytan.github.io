@@ -19,7 +19,7 @@ So, just edit `_config.yml`, find `highlighter: pygments`, change it to `highlig
 ## Boilerplate (beta)
 
 Want to clone a boilerplate instead of my buzz blog? Here comes this!  
-
+<!--
 ```
 $ git clone git@github.com:Huxpro/huxblog-boilerplate.git
 ```
@@ -305,3 +305,4 @@ So, the SEO Title is introduced to solve this problem, you can set `SEOTitle` di
 
 This theme is forked from [Huxpro/huxpro.github.io ](https://github.com/Huxpro/huxpro.github.io)  
 Much thanks to Huxpro, also Thanks Jekyll and Github Pages!
+-->
