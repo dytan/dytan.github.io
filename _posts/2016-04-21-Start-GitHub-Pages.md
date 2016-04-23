@@ -156,7 +156,26 @@ repo中存在jekyll项目时，可运行jekyll在本地浏览器中查看效果
 
 ## gitignore
 
+.gitignore是告诉git需要忽略的文件，这是一个很实用的设置文件。写完代码后会执行编译、调试等操作，这期间会产生很多中间文件和可执行文件，这些都是不需要git来管理的。
+需要添加到.gitignore文件中。
 
+在kekyll项目中 
+
+>_site  
+node_modules  
+npm-debug.log   
+.DS_Store            
+\*/.DS_Store         
+\*/\*/.DS_Store       
+\*.sh  
+
+
+## Reference
+- [Setting up your GitHub Pages site locally with Jekyll](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
+- [如何搭建一个独立博客——简明Github Pages与Hexo教程](http://www.jianshu.com/p/05289a4bc82b2)
+- [Github 简明教程](http://www.runoob.com/w3cnote/git-guide.html)
+- [搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门 by 阮一峰](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html)
+- [一步步在GitHub上创建博客主页 全系列 by pchou](http://pchou.info/web-build/2013/01/03/build-github-blog-page-01.html)
  
  
 
