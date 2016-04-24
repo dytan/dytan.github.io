@@ -105,7 +105,7 @@ GitHub 的 Help 文档中的 [User, Organization and Project Pages](https://help
 ------------|-----------------------------------------|        
 _config.yml |保存配置数据。很多配置选项都会直接从命令行中进行设置，但是如果你把那些配置写在这儿，你就不用非要去记住那些命令了。               
 _drafts     |drafts 是未发布的文章。这些文件的格式中都没有 title.MARKUP 数据。学习如何使用 drafts.              
-\_includes   |你可以加载这些包含部分到你的布局或者文章中以方便重用。可以用这个标签`/\{\%/ include file.ext /\%/}/`来把文件 _includes/file.ext 包含进来。       
+\_includes   |你可以加载这些包含部分到你的布局或者文章中以方便重用。可以用这个标签{_%_ include file.ext _%_}来把文件 _includes/file.ext 包含进来。       
 \_layouts    |layouts 是包裹在文章外部的模板。布局可以在 YAML 头信息中根据不同文章进行选择。 这将在下一个部分进b行介绍。标签 `{{` content `}}` s可以将content插入页面中。       
 _posts      |这里放的就是你的文章了。文件格式很重要，必须要符合: YEAR-MONTH-DAY-title.MARKUP。 The permalinks 可以在文章中自己定制，但是数据和标记语言都是根据文件名来确定的。        
 _data       |Well-formatted site data should be placed here. The jekyll engine will autoload all yaml files (ends with .yml or .yaml) in this directory. If there's a file members.yml under the directory, then you can access contents of the file through site.data.members.          
@@ -148,7 +148,8 @@ Other Files/Folders|其他一些未被提及的目录和文件如 css 还有 ima
     {% endraw %}
 
 可以看出，这个文件就是所有页面共有的东西，每个页面的具体内容会被填充在`content`中，注意这个`content`两边的标记，这是一种叫`liquid`的标记语言。 另外，还有那个`page.title`，其中 page 表示引用 default.html的 那个页面，这个页面的 title 值会在 page 相应页面中被设置，例如 下面的 index.html 文件，开头部分就设置了 title值。
->在md文件中若要引用符合[Liquid](http://shopify.github.io/liquid/)规范的字符串，以防解析，需要使用_/\{\%/ raw /\%\}/_ 与 _/\{\%/ endraw /\%\}/_分隔
+
+> 在md文件中若要引用符合[Liquid](http://shopify.github.io/liquid/)规范的字符串，以防解析，需要使用{_%_ raw  %} 与 {_%_ endraw _%_}分隔
 
 #### index.html
 
