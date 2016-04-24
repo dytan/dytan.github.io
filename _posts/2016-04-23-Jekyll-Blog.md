@@ -336,6 +336,8 @@ paginator.next_page_path    |下一页的地址。
 
 ## Reference
 
-- [jekyll documentation of Variables](http://jekyllrb.com/docs/variables/)
+- [jekyll documentation en](http://jekyllrb.com/docs/)
+- [jekyll documentation zh](http://jekyll.bootcss.com/docs/)
 - [jekyll 官网文档部分翻译](http://blog.csdn.net/maoxunxing/article/details/40479753)
 - [使用Jekyll+GitHub搭建自己的免费静态博客 by Francis Soung ](http://www.francissoung.com/2016/03/09/%E4%BD%BF%E7%94%A8Jekyll+GitHub%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%85%8D%E8%B4%B9%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/)
+- [Liquid Official Doc](http://shopify.github.io/liquid)
