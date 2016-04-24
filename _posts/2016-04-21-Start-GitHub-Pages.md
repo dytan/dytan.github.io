@@ -176,7 +176,7 @@ npm-debug.log
 - [Github 简明教程](http://www.runoob.com/w3cnote/git-guide.html)
 - [搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门 by 阮一峰](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html)
 - [一步步在GitHub上创建博客主页 全系列 by pchou](http://pchou.info/web-build/2013/01/03/build-github-blog-page-01.html)
- 
+- [采用Jekyll + github + pygments构建个人博客的最终说明 by KICIOLLO ](http://www.jianshu.com/p/609e1197754c) 
  
 
 
