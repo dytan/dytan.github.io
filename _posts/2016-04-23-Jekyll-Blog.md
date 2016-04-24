@@ -148,7 +148,7 @@ Other Files/Folders|其他一些未被提及的目录和文件如 css 还有 ima
     {% endraw %}
 
 可以看出，这个文件就是所有页面共有的东西，每个页面的具体内容会被填充在`content`中，注意这个`content`两边的标记，这是一种叫`liquid`的标记语言。 另外，还有那个`page.title`，其中 page 表示引用 default.html的 那个页面，这个页面的 title 值会在 page 相应页面中被设置，例如 下面的 index.html 文件，开头部分就设置了 title值。
->在md文件中若要引用符合[Liquid](http://shopify.github.io/liquid/)规范的字符串，以防解析，需要使用_{% raw %}_ 与 _{% endraw %}_分隔
+>在md文件中若要引用符合[Liquid](http://shopify.github.io/liquid/)规范的字符串，以防解析，需要使用_/\{\%/ raw /\%\}/_ 与 _/\{\%/ endraw /\%\}/_分隔
 
 #### index.html
 
