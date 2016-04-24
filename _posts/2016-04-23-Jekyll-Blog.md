@@ -278,7 +278,7 @@ tags:
 Jekyll 会遍历你的网站搜寻要处理的文件。任何有 YAML 头信息的文件都是要处理的对象。对于每一个这样的文件，Jekyll都会通过Liquid 模板工具来生成一系列的数据。
 下面是常用的一些可用数据变量的参考
 
-#### 全局(Global)变量
+#### 3.1 全局(Global)变量
 
 
 变量|说明   
@@ -288,7 +288,7 @@ page    |页面专属的信息 + YAML 头文件信息。通过 YAML 头文件自
 content |被 layout 包裹的那些 Post 或者 Page 渲染生成的内容。但是又没定义在 Post 或者 Page 文件中的变量。            
 paginator|每当 paginate 配置选项被设置了的时候，这个变量就可用了。详情请看，分页。          
 
-#### 全站(site)变量
+#### 3.2 全站(site)变量
 
 
 变量|说明       
@@ -301,7 +301,7 @@ site.categories.CATEGORY|所有的在 CATEGORY 类别下的帖子。
 site.tags.TAG|所有的在 TAG 标签下的帖子。               
 site.[CONFIGURATION_DATA]|所有的通过命令行和 _config.yml 设置的变量都会存到这个 site 里面。 举例来说，如果你设置了 url: http://mysite.com 在你的配置文件中，那么在你的 Posts 和 Pages 里面，这个变量就被存储在了 site.url。Jekyll 并不会把对 _config.yml 做的改动放到 watch 模式，所以你每次都要重启 Jekyll来让你的变动生效。 
  
-#### 页面(page)变量
+#### 3.3 页面(page)变量
 
 变量|说明           
 |----------|----------|
@@ -317,7 +317,7 @@ page.path       |Post 或者 Page 的源文件地址。举例来说，一个页�
 
 >任何自定义的头文件信息都会在 page 中可用。 具体来说，如果你在一个 Page 的头文件中设置了 custom_css: true， 这个变量就可以这样被取到 page.custom_css。 
 
-#### 分页器(Paginator)
+#### 3.4 分页器(Paginator)
 
 变量|说明       
 |------------|-------------|
